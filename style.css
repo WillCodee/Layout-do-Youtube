@@ -162,14 +162,19 @@ cursor: pointer;
   flex-direction: row;
   border: 1px solid black;
   border-radius: 25px;
-  margin: 0 350px 0 350px;
   background: rgb(226, 222, 222);
-  gap: 5px;
+  padding: 10px;
+  margin: 20px 0;
   cursor: pointer;
+  white-space: nowrap;
   }
   
+  #inscrever{
+    padding: 10px;
+    flex-wrap: nowrap;
+  }
   
-  .main button:hover,
+  #inscrever:hover,
   .sinais:hover,
   .compartilhar:hover{
   background: rgb(160, 155, 155);
@@ -220,14 +225,8 @@ cursor: pointer;
 #comentarios{
   max-height: 10vh;
   border-radius: 15px;
-  margin: 0 0 20px 0;
+  margin: 20px 0 20px 0;
   padding: 5px;
-}
-
-#comentar{
-  margin-top: 5%;
-  margin-bottom: 0;
-  margin-left: 2%;
 }
 
 .link{
@@ -247,15 +246,84 @@ cursor: pointer;
   }
 }
 
-@media (max-width:800px){
-
-  .main-content {
+@media (max-width: 428px) {
+  /* Menu responsivo alinhado à tela */
+  .menu-content {
     display: grid;
+    grid-template-columns: 1fr auto ;
     flex-direction: column;
+    align-items: stretch;
+    width: 100%;
+    
+    box-sizing: border-box;
     flex-wrap: wrap;
-    gap: 20px;
-    justify-content: center;
-    align-items: center;
-    width: 50vh;
+
+  }
+
+  .menu{
+    margin-top: 50;
+  }
+
+  /* Grid com uma única coluna */
+  .grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 12px;
+    padding: 10px;
+  }
+
+  /* Campo de pesquisa ocupa a largura total */
+  .pesquisar input {
+    width: 100%;
+    padding: 10px;
+    font-size: 16px;
+    box-sizing: border-box;
+  }
+
+  /* Ajuste nos itens do menu da direita */
+  .menu-right {
+    flex-direction: column;
+    gap: 10px;
+    width: 100%;
+    margin: 0;
+    align-items: stretch;
+  }
+
+  /* Imagens se ajustam à largura da tela */
+  .side-group img {
+    width: 50%;
+    height: auto;
+  }
+
+  /* Vídeo responsivo com proporção */
+  .main iframe.video-main {
+    width: 43%;
+    height: 50%;
+    border-radius: 8px;
+    max-width: 150vh;
+  }
+
+  /* Títulos e textos menores */
+  h1, h2, h3, p {
+    font-size: 90%;
+    word-break: break-word;
+  }
+
+  /* Botões ajustados para tocar mais facilmente */
+  button {
+    width: 50%;
+    font-size: 16px;
+    padding: 12px;
+  }
+
+  /* Padding geral em containers */
+  .container,
+  .main,
+  .content {
+    padding: 10px;
+    box-sizing: border-box;
   }
 }
+
+
+
